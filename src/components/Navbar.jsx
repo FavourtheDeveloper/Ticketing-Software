@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import { Link } from 'react-router-dom'
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
@@ -13,8 +14,7 @@ const Navbar = () => {
                 <Link to={"/"}><li>Home</li></Link>
                 <Link to={"/events"}><li>Events</li></Link>
                 <Link to={"/tickets"}><li>My Tickets</li></Link>
-                <Link to={"/contact"}><li>Contact Us</li></Link>
-                <Button btnlink={"/signup"} btnText={"SignUp"} />
+                <Link><FaSquareXTwitter size={30} /></Link>
             </ul>
         </div>
     </div>

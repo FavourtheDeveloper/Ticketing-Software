@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 import ticket from "../assets/images/ticket.jpg";
@@ -6,6 +6,26 @@ import Event from "../components/Event";
 import Footer from "../components/Footer";
 
 const Home = () => {
+  const [events, setEvents] = useState([])
+  const [collapse, setCollapse] = useState(true)
+
+
+  useEffect(() => {
+  const url = "http://localhost:3000/data";
+
+  const getData = async() => {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    const homeData = data.slice(0, 3)
+    setEvents(homeData)
+  }
+
+ getData()
+
+  }, [])
+  
+
   return (
     <div>
       <div className="showcase bg-#060918 h-screen mb-8">
@@ -35,9 +55,9 @@ const Home = () => {
           <h3>Check out trending events with KIN x Code</h3>
         </div>
         <div className="eventsec flex flex-wrap m-auto justify-around mt-10">
-          <Event eventname="Event 1" eventdetails={"A lil details about the event desired"} />
-          <Event eventname="Event 2" eventdetails={"A lil details about the event desired"} />
-          <Event eventname="Event 3" eventdetails={"A lil details about the event desired"} />
+    {events.map((event, index) => (
+      <Event key={event.id} eventname={event.eventName} eventdetails={event.eventDetails.slice(0, 100)} eventid={event.id} collapse={collapse} />
+    ))}
         </div>
       </div>
 

@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import Navbar from '../components/Navbar'
 import Event from '../components/Event'
 
 const Events = () => {
+    const [events, setEvents] = useState([])
+    const [collapse, setCollapse] = useState([])
+    const [search, setSearch] = useState()
+
+    const url = 'http://localhost:3000/data'
+      useEffect(() => {
+        const getEvents = async() => {
+          const res = await fetch(url);
+          const data = await res.json();
+          const filteredData = data.filter(event => event.eventName.toLowerCase().includes(search))
+          if (search) {
+            setEvents(filteredData)
+          } else {
+            setEvents(data)
+          }
+        }
+    
+        getEvents()
+      }, [search]) 
+
+      const filterSearch = (e) => {
+        setSearch(e.target.value);
+      }
+
+      console.log(search);
+      
   return (
     <div>
         <Navbar />
@@ -14,17 +40,16 @@ const Events = () => {
         <div className="flex justify-center">
           <input
             type="text"
+            value={search}
+            onChange={filterSearch}
             className="block w-2/4 rounded-md border-0 py-1.5 pl-7 mt-6 pr-20 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             placeholder="Search for desired events"
           />
         </div>
         <div className="eventsec flex flex-wrap m-auto justify-around mt-10">
-          <Event eventname="Event 1" eventdetails={"A lil details about the event desired"} />
-          <Event eventname="Event 2" eventdetails={"A lil details about the event desired"} />
-          <Event eventname="Event 3" eventdetails={"A lil details about the event desired"} />
-          <Event eventname="Event 4" eventdetails={"A lil details about the event desired"} />
-          <Event eventname="Event 5" eventdetails={"A lil details about the event desired"} />
-          <Event eventname="Event 6" eventdetails={"A lil details about the event desired"} />
+            {events.map((event, index) => (
+                <Event key={event.id} eventname={event.eventName} eventdetails={event.eventDetails.slice(0, 100)} eventid={event.id} collapse={collapse} />
+            ))}
         </div>
       </div>
     </div>
