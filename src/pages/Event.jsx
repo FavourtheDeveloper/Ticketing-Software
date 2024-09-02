@@ -8,14 +8,14 @@ const Event = () => {
     <div>
       <Navbar />
 
-      <div className="eventdetails w-3/4 gap-20 flex justify-around m-auto mt-15">
+      <div className="eventdetails w-3/4 gap-20 flex justify-around m-auto">
         <div className="image w-1/2">
           <img
             src="https://docs.material-tailwind.com/img/team-3.jpg"
             alt="event-picture"
           />
         </div>
-        <div className="eventdet w-1/2">
+        <div className="eventdet text-white w-1/2">
           <b>Thursday, Sept 1st</b>
           <h1 className="text-4xl p-1 font-bold">
             KIN x Code Hackathon Competition <br /> Program
@@ -29,7 +29,7 @@ const Event = () => {
           <p className="text-lg"><b>Date: </b>Thursday, September 19, 2024</p>
           <p className="text-lg mb-5"><b>Time: </b>12:00 PM EDT</p>
           <div >
-          <Button btnText={"Get this Ticket"} />
+          <Button btnlink={'/ticket'} btnText={"Get this Ticket"} />
           </div>
         </div>
       </div>

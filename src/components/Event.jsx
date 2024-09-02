@@ -4,7 +4,7 @@ import codeimg from '../assets/images/codeimg.avif'
 
 const Event = ({eventname, eventdetails}) => {
   return (
-    <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+    <div class="relative flex flex-col text-white mb-5 bg-#0b172b shadow-md bg-clip-border rounded-xl w-96">
       <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-80">
         <img
           src="https://docs.material-tailwind.com/img/team-3.jpg"
