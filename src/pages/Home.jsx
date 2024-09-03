@@ -11,7 +11,7 @@ const Home = () => {
 
 
   useEffect(() => {
-  const url = "/api/events";
+  const url = "/api/data";
 
   const getData = async() => {
     const res = await fetch(url);

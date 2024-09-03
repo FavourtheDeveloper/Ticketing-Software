@@ -22,7 +22,7 @@ const Event = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [event, setEvent] = useState([]);
-  const url = `/api/events/${id}`;
+  const url = `/api/data/${id}`;
   useEffect(() => {
     const getEvents = async () => {
       const res = await fetch(url);
