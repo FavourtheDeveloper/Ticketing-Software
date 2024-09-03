@@ -11,7 +11,7 @@ const Home = () => {
 
 
   useEffect(() => {
-  const url = "/api/data";
+  const url = "/api/json-server";
 
   const getData = async() => {
     const res = await fetch(url);
