@@ -2,7 +2,8 @@
     "version": 2,
     "builds": [
       {
-        "src": "events.json"
+        "src": "events.json",
+        "use": "@vercel/node",
       }
     ]
   }
