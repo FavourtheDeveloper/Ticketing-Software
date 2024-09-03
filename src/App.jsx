@@ -5,6 +5,7 @@ import Event from './pages/Event'
 import Events from './pages/Events'
 import Ticket from './pages/Ticket'
 import Error from './pages/Error'
+import Generate from './pages/Generate'
 const App = () => {
   return (
     <> 
@@ -14,7 +15,8 @@ const App = () => {
     <Route path='*' element={<Error />} />
     <Route path='/events' element={<Events />} />
     <Route path='/event/:id' element={<Event />} />
-    <Route path='/ticket' element={<Ticket />} />
+    <Route path='/ticket/:id' element={<Ticket />} />
+    <Route path='/generate/:name' element={<Generate />} />
     </Routes>
     </Router>
     </>

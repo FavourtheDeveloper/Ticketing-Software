@@ -32,14 +32,14 @@ const Home = () => {
         <Navbar />
 
         <div className="showtext text-center">
-          <h1 className="text-6xl text-white pt-20 font-bold">
-            Sell Tickets Online for Your Event
+          <h1 className="text-3xl text-white pt-20 font-bold lg:text-6xl">
+            Get Tickets Online for Your Event
           </h1>
           <p className="text-yellow-500 font-bold p-2">KIN x Code</p>
         </div>
 
         <div className="showsell text-center pt-10">
-          <Button btnText="Sell Tickets for Your Event" />
+          <Button btnText="Get Tickets for Your Event" btnlink={'/events'} />
         </div>
 
         <div className="flex justify-center mt-10 tick">

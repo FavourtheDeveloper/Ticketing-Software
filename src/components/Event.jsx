@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Event = ({eventname, eventdetails, eventid, collapse}) => {
   return (
     <div className="relative flex flex-col text-white mb-5 bg-#0b172b shadow-md bg-clip-border rounded-xl w-96">
-      <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-80">
+      <div className="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-50">
         <img
           src="https://docs.material-tailwind.com/img/team-3.jpg"
           alt="profile-picture"

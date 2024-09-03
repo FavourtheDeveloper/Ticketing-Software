@@ -5,6 +5,7 @@ const Ticket = () => {
   return (
     <div>
         <Navbar />
+        
     </div>
   )
 }
