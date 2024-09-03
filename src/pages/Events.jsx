@@ -7,7 +7,7 @@ const Events = () => {
     const [collapse, setCollapse] = useState([])
     const [search, setSearch] = useState()
 
-    const url = 'http://localhost:3000/data'
+    const url = '/api/data'
       useEffect(() => {
         const getEvents = async() => {
           const res = await fetch(url);
