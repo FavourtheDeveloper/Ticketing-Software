@@ -12,7 +12,7 @@ const Generate = () => {
       <hr />
 
       <div className="text-center mt-20 pb-5">
-        <h1 className="text-white text-5xl">Welcome {name}</h1>
+        <h1 className="text-white text-2xl pb-2 md:text-5xl">Welcome {name}</h1>
         <p className="text-yellow-500">Thanks for registering for the Event</p>
       </div>
 

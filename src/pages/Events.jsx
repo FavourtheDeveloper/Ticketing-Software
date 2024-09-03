@@ -33,8 +33,8 @@ const Events = () => {
     <div>
         <Navbar />
 
-        <div className="events mt-32">
-        <h1 className="text-4xl font-bold text-yellow-500 text-center">
+        <div className="events lg:mt-32">
+        <h1 className="text-2xl lg:text-4xl font-bold text-yellow-500 text-center">
           Search for Events
         </h1>
         <div className="flex justify-center">
@@ -42,7 +42,7 @@ const Events = () => {
             type="text"
             value={search}
             onChange={filterSearch}
-            className="block w-2/4 rounded-md border-0 py-1.5 pl-7 mt-6 pr-20 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="block w-3/4 lg:w-2/4 rounded-md border-0 py-1.5 pl-2 lg:pl-7 mt-6 lg:pr-20 text-gray-900 ring-1 ring-inset ring-gray-500 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             placeholder="Search for desired events"
           />
         </div>
