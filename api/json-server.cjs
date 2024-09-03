@@ -13,7 +13,12 @@ const middlewares = jsonServer.defaults();
 server.use(middlewares);
 server.use(router);
 
+console.log('Serving data from:', path.join(__dirname, 'events.json'));
+
+
 const port = process.env.PORT || 3000;
 createServer(server).listen(port, () => {
   console.log(`JSON Server is running on port ${port}`);
+  console.log('Serving data from:', path.join(__dirname, 'events.json'));
+
 });
