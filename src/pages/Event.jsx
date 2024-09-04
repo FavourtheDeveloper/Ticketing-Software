@@ -4,7 +4,8 @@ import Button from "../components/Button";
 import Footer from "../components/Footer";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import Modal from "react-modal";
-import code from "../assets/images/codeimg.avif";
+import Codepayment from "../components/Codepayment";
+// import codee from "../assets/images/codeimg.avif";
 
 const customStyles = {
   content: {
@@ -17,7 +18,6 @@ const customStyles = {
   },
 };
 
-
 const Event = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -27,7 +27,7 @@ const Event = () => {
     const getEvents = async () => {
       const res = await fetch(url);
       const data = await res.json();
-      const fdata = data.find(event => event.id === id)
+      const fdata = data.find((event) => event.id === id);
       setEvent(fdata);
     };
 
@@ -51,8 +51,6 @@ const Event = () => {
     setIsOpen(false);
   }
 
-  
-
   return (
     <div>
       <Navbar />
@@ -66,8 +64,12 @@ const Event = () => {
         </div>
         <div className="eventdet mt-8 text-sm text-white lg:w-1/2">
           <b>{event.date}</b>
-          <h1 className="text-2xl  lg:text-4xl p-1 font-bold">{event.eventName}</h1>
-          <h2 className="text-lg mt-5 text-center font-bold">About this event</h2>
+          <h1 className="text-2xl  lg:text-4xl p-1 font-bold">
+            {event.eventName}
+          </h1>
+          <h2 className="text-lg mt-5 text-center font-bold">
+            About this event
+          </h2>
           <p className="text-lg p-3 text-justify">{event.eventDetails}</p>
           <p className="text-lg">
             <b>Date: </b>
@@ -120,14 +122,18 @@ const Event = () => {
                     />
                   </div>
                   <div className="flex items-center justify-around">
-                    <Link to={`/generate/${name}`} ><button
-                      className="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                      type="button"
-                      disabled={!name}
-                    >
-                      Generate Ticket{" "}
-                      <img src={code} className="w-4 h-4 ml-2 mt-1" />
-                    </button></Link>
+                    {/* <Link to={`/generate/${name}`}>
+                      <button id="button-container"
+                        className="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="button"
+                        disabled={!name}
+                      >
+                        Generate Ticket{" "}
+                        <img src={codee} className="w-4 h-4 ml-2 mt-1" />
+                      </button>
+                    </Link> */}
+                    {name && <Codepayment />}
+                    
                   </div>
                 </form>
                 <p className="text-center text-gray-500 text-xs">
