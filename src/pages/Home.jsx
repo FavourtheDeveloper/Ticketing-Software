@@ -11,10 +11,14 @@ const Home = () => {
 
 
   useEffect(() => {
-  const url = "/api/data";
+  const url = "/events.json";
+  
 
   const getData = async() => {
     const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error("Network response was not ok");
+    }
     const data = await res.json();
 
     const homeData = data.slice(0, 3)

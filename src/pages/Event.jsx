@@ -22,12 +22,13 @@ const Event = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [event, setEvent] = useState([]);
-  const url = `/api/data/${id}`;
+  const url = `/events.json`;
   useEffect(() => {
     const getEvents = async () => {
       const res = await fetch(url);
       const data = await res.json();
-      setEvent(data);
+      const fdata = data.find(event => event.id === id)
+      setEvent(fdata);
     };
 
     getEvents();
