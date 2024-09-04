@@ -8,7 +8,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className="bg-gray-800 p-4 lg:p-7">
+    <div className="bg-gray-800 p-4 lg:p-7 mb-8">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-lg lg:text-6xl font-bold">
           <h1 className="text-center">KinVent</h1>
