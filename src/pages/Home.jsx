@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="showcase bg-#060918 h-screen mb-8">
+      <div className="showcase bg-#060918 mb-8">
         <Navbar />
 
         <div className="showtext text-center">
@@ -47,7 +47,7 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center mt-10">
-          <img src={ticket} className="w-5/12 md:w-3/12 md:h-3/14" />
+          <img src={ticket} className="w-5/12 md:w-3/12" />
         </div>
       </div>
 
