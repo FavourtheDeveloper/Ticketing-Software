@@ -36,7 +36,7 @@ const Home = () => {
         <Navbar />
 
         <div className="showtext text-center">
-          <h1 className="text-3xl text-white pt-6 lg:pt-20 font-bold lg:text-6xl">
+          <h1 className="text-4xl p-3 text-white pt-14 md:pt-16 lg:pt-20 font-bold md:text-5xl lg:text-6xl">
             Get Tickets Online for Your Event
           </h1>
           <p className="text-yellow-500 font-bold p-2">KIN x Code</p>
@@ -47,7 +47,7 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center mt-10">
-          <img src={ticket} className="w-2/12 lg:w-3/12 lg:h-3/14" />
+          <img src={ticket} className="w-5/12 md:w-3/12 md:h-3/14" />
         </div>
       </div>
 

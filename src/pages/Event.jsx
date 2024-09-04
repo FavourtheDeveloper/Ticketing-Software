@@ -51,6 +51,8 @@ const Event = () => {
     setIsOpen(false);
   }
 
+  
+
   return (
     <div>
       <Navbar />
@@ -90,7 +92,7 @@ const Event = () => {
               style={customStyles}
               contentLabel="Example Modal"
             >
-              <div className="flex justify-end">
+              <div className="flex justify-end p-5">
                 <button
                   onClick={closeModal}
                   className="bg-red-500 p-1 text-white rounded-lg"
@@ -98,17 +100,17 @@ const Event = () => {
                   close
                 </button>
               </div>
-              <div class="w-full max-w-xs">
-                <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                  <div class="mb-4">
+              <div className="w-full max-w-xs">
+                <form className="bg-white shadow-md rounded px-4 md:px-8 pt-6 pb-8 mb-4">
+                  <div className="mb-4">
                     <label
-                      class="block text-gray-700 text-sm font-bold mb-2"
-                      for="fullname"
+                      className="block text-gray-700 text-sm font-bold mb-2"
+                      htmlFor="fullname"
                     >
                       Full Name
                     </label>
                     <input
-                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="fullname"
                       type="text"
                       value={name}
@@ -117,9 +119,9 @@ const Event = () => {
                       required
                     />
                   </div>
-                  <div class="flex items-center justify-around">
+                  <div className="flex items-center justify-around">
                     <Link to={`/generate/${name}`} ><button
-                      class="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      className="flex bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                       type="button"
                       disabled={!name}
                     >
@@ -128,7 +130,7 @@ const Event = () => {
                     </button></Link>
                   </div>
                 </form>
-                <p class="text-center text-gray-500 text-xs">
+                <p className="text-center text-gray-500 text-xs">
                   &copy;2024 FavourtheDev All rights reserved.
                 </p>
               </div>
