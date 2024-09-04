@@ -12,6 +12,7 @@ const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, 'events.json'));
 const middlewares = jsonServer.defaults();
 
+
 server.use(middlewares);
 server.use(router);
 
