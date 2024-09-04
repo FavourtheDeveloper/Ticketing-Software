@@ -15,6 +15,7 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
+    backgroundColor: '#1F2937'
   },
 };
 
@@ -94,19 +95,19 @@ const Event = () => {
               style={customStyles}
               contentLabel="Example Modal"
             >
-              <div className="flex justify-end p-5">
+              <div className="flex justify-end rounded-lg p-5">
                 <button
                   onClick={closeModal}
-                  className="bg-red-500 p-1 text-white rounded-lg"
+                  className="bg-red-500 px-4 py-1 text-white rounded-lg"
                 >
-                  close
+                  X
                 </button>
               </div>
               <div className="w-full max-w-xs">
-                <form className="bg-white shadow-md rounded px-4 md:px-8 pt-6 pb-8 mb-4">
+                <form className="bg-gray-800 shadow-md rounded-xl px-4 md:px-8 pt-6 pb-8 mb-4">
                   <div className="mb-4">
                     <label
-                      className="block text-gray-700 text-sm font-bold mb-2"
+                      className="block text-white text-sm font-bold mb-2"
                       htmlFor="fullname"
                     >
                       Full Name
@@ -132,7 +133,7 @@ const Event = () => {
                         <img src={codee} className="w-4 h-4 ml-2 mt-1" />
                       </button>
                     </Link> */}
-                    {name && <Codepayment />}
+                    {name && <Codepayment name={name} id={id} />}
                     
                   </div>
                 </form>
