@@ -11,7 +11,7 @@ const Codepayment = ({name, id}) => {
     const { button } = code.elements.create("button", {
       currency: "usd",
       destination: "FyADBZXgbatVndStsK7L66FRSeVsPgMjVaTeGrW2iGMU",
-      amount: 0.95,
+      amount: 1,
       appearance: "light",
     });
 
