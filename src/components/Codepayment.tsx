@@ -23,7 +23,8 @@ const Codepayment = ({name, id}) => {
   
   button.on('cancel', async (event) => {
       // Handle cancelled payment, the intent ID will be provided in the event object
-      navigate(`/event/${id}`)
+      navigate(`/event/${id}`);
+      alert("Payment not successful")
       // return true; // Return true to prevent the browser from navigating to the optional cancel URL provided in the confirmParams
   });
 

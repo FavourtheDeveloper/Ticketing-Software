@@ -57,9 +57,9 @@ const Event = () => {
       <Navbar />
 
       <div className="eventdetails lg:w-3/4 p-10 lg:gap-20 lg:flex lg:justify-around m-auto">
-        <div className="image flex justify-center lg:w-1/2">
+        <div className="image flex justify-center lg:w-1/2 lg:h-1/2">
           <img
-            src="https://docs.material-tailwind.com/img/team-3.jpg"
+            src={event.imageLink}
             alt="event-picture"
           />
         </div>

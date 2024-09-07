@@ -1,51 +1,51 @@
- [
-        {
-          "id": "1",
-          "eventName": "Tech Conference 2024",
-          "eventDetails": "An annual conference bringing together technology enthusiasts, professionals, and industry leaders to discuss the latest trends and innovations.",
-          "date": "Thursday, Sept 1st",
-          "time": "10:00 AM - 4:00 PM",
-          "imageLink": "https://example.com/images/tech_conference.jpg"
-        },
-        {
-          "id": "2",
-          "eventName": "Art Exhibition: Modern Visions",
-          "eventDetails": "A showcase of contemporary art from emerging and established artists. Experience the vibrant world of modern art in this unique exhibition.",
-          "date": "Thursday, Sept 1st",
-          "time": "2:00 PM - 7:00 PM",
-          "imageLink": "https://example.com/images/art_exhibition.jpg"
-        },
-        {
-          "id": "3",
-          "eventName": "Music Festival 2024",
-          "eventDetails": "Join us for a weekend of live performances by top artists across multiple genres. Enjoy music, food, and fun in an open-air setting.",
-          "date": "Friday, Sept 2nd",
-          "time": "12:00 PM - 11:00 PM",
-          "imageLink": "https://example.com/images/music_festival.jpg"
-        },
-        {
-          "id": "4",
-          "eventName": "Startup Pitch Night",
-          "eventDetails": "Watch as budding entrepreneurs pitch their innovative ideas to a panel of investors. Who will secure the funding to take their startup to the next level?",
-          "date": "Thursday, Sept 1st",
-          "time": "6:00 PM - 9:00 PM",
-          "imageLink": "https://example.com/images/startup_pitch.jpg"
-        },
-        {
-          "id": "5",
-          "eventName": "Community Cleanup Day",
-          "eventDetails": "Join your neighbors in a community effort to clean up local parks and public spaces. All ages are welcome, and supplies will be provided.",
-          "date": "Saturday, Sept 3rd",
-          "time": "9:00 AM - 12:00 PM",
-          "imageLink": "https://example.com/images/community_cleanup.jpg"
-        },
-        {
-          "id": "6",
-          "eventName": "Culinary Workshop: Gourmet Cooking",
-          "eventDetails": "Learn the art of gourmet cooking from a professional chef in this hands-on workshop. Perfect for food enthusiasts of all skill levels.",
-          "date": "Sunday, Sept 4th",
-          "time": "11:00 AM - 2:00 PM",
-          "imageLink": "https://example.com/images/culinary_workshop.jpg"
-        }
-      ]
-    
+[
+  {
+    "id": "1",
+    "eventName": "KIN x GetCode Hackathon 2024",
+    "eventDetails": "Join the ultimate blockchain-based hackathon where developers compete to build innovative solutions using KIN x GetCode's micropayment technology. Collaborate with like-minded innovators and present your projects to top judges in the blockchain space.",
+    "date": "Friday, Oct 6th",
+    "time": "9:00 AM - 9:00 PM",
+    "imageLink": "/code.jpg"
+  },
+  {
+    "id": "2",
+    "eventName": "Building Decentralized Apps with KIN x GetCode",
+    "eventDetails": "A hands-on workshop where developers dive into building decentralized applications (dApps) using KIN x GetCode's blockchain. Ideal for both new and experienced developers looking to explore blockchain integration in real-world projects.",
+    "date": "Saturday, Oct 7th",
+    "time": "2:00 PM - 5:00 PM",
+    "imageLink": "/code.jpg"
+  },
+  {
+    "id": "3",
+    "eventName": "Blockchain for Micropayments: Tech Talk",
+    "eventDetails": "An engaging talk on how KIN x GetCode is revolutionizing micropayments through blockchain. Learn about decentralized payment systems, security, and future applications for blockchain in everyday digital transactions.",
+    "date": "Saturday, Oct 7th",
+    "time": "10:00 AM - 12:00 PM",
+    "imageLink": "/code.jpg"
+  },
+
+  {
+    "id": "4",
+    "eventName": "KIN x GetCode Networking Night",
+    "eventDetails": "An evening of networking with top blockchain professionals, investors, and developers. Share ideas, discover new opportunities, and explore partnerships within the KIN x GetCode ecosystem.",
+    "date": "Saturday, Oct 7th",
+    "time": "6:00 PM - 9:00 PM",
+    "imageLink": "/code.jpg"
+  },
+  {
+    "id": "5",
+    "eventName": "Future of Micropayments: Expert Panel",
+    "eventDetails": "Join an expert panel discussion featuring blockchain leaders discussing the future of micropayments, the challenges ahead, and how KIN x GetCode is leading the charge in transforming the digital economy.",
+    "date": "Sunday, Oct 8th",
+    "time": "11:00 AM - 1:00 PM",
+    "imageLink": "/code.jpg"
+  },
+  {
+    "id": "6",
+    "eventName": "KIN x GetCode Developer Conference",
+    "eventDetails": "A full-day conference featuring keynote speakers, panel discussions, and breakout sessions focused on blockchain development, payment solutions, and the latest advancements in KIN x GetCode technology.",
+    "date": "Sunday, Oct 8th",
+    "time": "9:00 AM - 6:00 PM",
+    "imageLink": "/code.jpg"
+  }
+]

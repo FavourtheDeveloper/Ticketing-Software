@@ -60,7 +60,7 @@ const Home = () => {
         </div>
         <div className="eventsec flex flex-wrap m-auto justify-around mt-10">
     {events.map((event, index) => (
-      <Event key={event.id} eventname={event.eventName} eventdetails={event.eventDetails.slice(0, 100)} eventid={event.id} collapse={collapse} />
+      <Event key={event.id} eventname={event.eventName} eventdetails={event.eventDetails.slice(0, 100)} eventid={event.id} eventImg={event.imageLink} collapse={collapse} />
     ))}
         </div>
       </div>

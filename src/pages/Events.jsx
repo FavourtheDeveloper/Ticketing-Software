@@ -1,39 +1,40 @@
 import React, { useState, useEffect } from "react";
-import Navbar from '../components/Navbar'
-import Event from '../components/Event'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Event from "../components/Event";
 
 const Events = () => {
-    const [events, setEvents] = useState([])
-    const [collapse, setCollapse] = useState([])
-    const [search, setSearch] = useState()
+  const [events, setEvents] = useState([]);
+  const [collapse, setCollapse] = useState([]);
+  const [search, setSearch] = useState();
 
-    const url = '/events.json'
-      useEffect(() => {
-        const getEvents = async() => {
-          const res = await fetch(url);
-          const data = await res.json();
-          const filteredData = data.filter(event => event.eventName.toLowerCase().includes(search))
-          if (search) {
-            setEvents(filteredData)
-          } else {
-            setEvents(data)
-          }
-        }
-    
-        getEvents()
-      }, [search]) 
-
-      const filterSearch = (e) => {
-        setSearch(e.target.value);
+  const url = "/events.json";
+  useEffect(() => {
+    const getEvents = async () => {
+      const res = await fetch(url);
+      const data = await res.json();
+      const filteredData = data.filter((event) =>
+        event.eventName.toLowerCase().includes(search)
+      );
+      if (search) {
+        setEvents(filteredData);
+      } else {
+        setEvents(data);
       }
+    };
 
-      console.log(search);
-      
+    getEvents();
+  }, [search]);
+
+  const filterSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <div>
-        <Navbar />
+      <Navbar />
 
-        <div className="events lg:mt-32">
+      <div className="events lg:mt-32">
         <h1 className="text-2xl lg:text-4xl font-bold text-yellow-500 text-center">
           Search for Events
         </h1>
@@ -47,13 +48,22 @@ const Events = () => {
           />
         </div>
         <div className="eventsec flex flex-wrap m-auto justify-around mt-10">
-            {events.map((event, index) => (
-                <Event key={event.id} eventname={event.eventName} eventdetails={event.eventDetails.slice(0, 100)} eventid={event.id} collapse={collapse} />
-            ))}
+          {events.map((event, index) => (
+            <Event
+              key={event.id}
+              eventname={event.eventName}
+              eventdetails={event.eventDetails.slice(0, 100)}
+              eventid={event.id}
+              eventImg={event.imageLink}
+              collapse={collapse}
+            />
+          ))}
         </div>
       </div>
-    </div>
-  )
-}
 
-export default Events
+      <Footer />
+    </div>
+  );
+};
+
+export default Events;
