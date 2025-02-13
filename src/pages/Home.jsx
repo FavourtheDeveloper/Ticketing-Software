@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import ticket from "../assets/images/ticket.jpg";
 import Event from "../components/Event";
 import Footer from "../components/Footer";
+import ChatwootWidget from "../components/ChatwootWidget"
 
 const Home = () => {
   const [events, setEvents] = useState([])
@@ -44,6 +45,10 @@ const Home = () => {
 
         <div className="showsell text-center pt-10">
           <Button btnText="Get Tickets for Your Event" btnlink={'/events'} />
+        </div>
+
+        <div>
+          <ChatwootWidget />
         </div>
 
         <div className="flex justify-center mt-10">
