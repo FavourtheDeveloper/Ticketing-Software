@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const ChatwootWidget = () => {
   useEffect(() => {   
-    const BASE_URL = "http://98.71.35.209"; 
+    const BASE_URL = import.meta.env.VITE_CHATWOOT_BASE_URL; 
     const script = document.createElement("script");
     script.src = `${BASE_URL}/packs/js/sdk.js`;
     script.defer = true;
@@ -11,14 +11,14 @@ const ChatwootWidget = () => {
     script.onload = () => {
       if (window.chatwootSDK) {
         window.chatwootSDK.run({
-          websiteToken: "MDFAK1wzZKG4iirZoNB1G6Wu",
+          websiteToken: import.meta.env.VITE_CHATWOOT_TOKEN,
           baseUrl: BASE_URL,
           user: {
             identifier: "iglory13@gmail.com",
             name: "Glory Isaiah",
             email: "iglory13@gmail.com",
             avatar_url: "",
-            identifier_hash: "bBjjr17djDGezNLGW7u2b89Z", // Ensure it's prefixed correctly
+            identifier_hash: import.meta.env.VITE_CHATWOOT_HASH, // Ensure it's prefixed correctly
           },
         });
       } else {
