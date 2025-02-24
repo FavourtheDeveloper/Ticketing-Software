@@ -11,7 +11,7 @@ const ChatwootWidget = () => {
     script.onload = () => {
       if (window.chatwootSDK) {
         window.chatwootSDK.run({
-          websiteToken: "MDFAK1wzZKG4iirZoNB1G6Wu",
+          websiteToken: import.meta.env.WEBSITE_TOKEN,
           baseUrl: BASE_URL,
           user: {
             identifier: "iglory13@gmail.com",
