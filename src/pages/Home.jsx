@@ -10,11 +10,6 @@ const Home = () => {
   const [events, setEvents] = useState([])
   const [collapse, setCollapse] = useState(true)
   
-  console.log("Chatwoot ENV in Production:", {
-    BASE_URL: import.meta.env.VITE_CHATWOOT_BASE_URL,
-    TOKEN: import.meta.env.VITE_CHATWOOT_TOKEN,
-    HASH: import.meta.env.VITE_CHATWOOT_HASH,
-  });
 
   useEffect(() => {
   const url = "/events.json";
