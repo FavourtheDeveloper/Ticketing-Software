@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const ChatwootWidget = () => {
   useEffect(() => {   
-    const BASE_URL = "https://dev.afexjenkins.click"; 
+    const BASE_URL = "http://98.71.35.209"; 
     const script = document.createElement("script");
     script.src = `${BASE_URL}/packs/js/sdk.js`;
     script.defer = true;
@@ -11,7 +11,7 @@ const ChatwootWidget = () => {
     script.onload = () => {
       if (window.chatwootSDK) {
         window.chatwootSDK.run({
-          websiteToken: "EheaCk2wAS9iC9SC7MGb7sg5",
+          websiteToken: "MDFAK1wzZKG4iirZoNB1G6Wu",
           baseUrl: BASE_URL,
           user: {
             identifier: "iglory13@gmail.com",
