@@ -9,7 +9,7 @@ import ChatwootWidget from "../components/ChatwootWidget"
 const Home = () => {
   const [events, setEvents] = useState([])
   const [collapse, setCollapse] = useState(true)
-
+  
 
   useEffect(() => {
   const url = "/events.json";

@@ -11,14 +11,14 @@ const ChatwootWidget = () => {
     script.onload = () => {
       if (window.chatwootSDK) {
         window.chatwootSDK.run({
-          websiteToken: import.meta.env.WEBSITE_TOKEN,
+          websiteToken: `${import.meta.env.VITE_WEBSITE_TOKEN}`,
           baseUrl: BASE_URL,
           user: {
             identifier: "iglory13@gmail.com",
             name: "Glory Isaiah",
             email: "iglory13@gmail.com",
             avatar_url: "",
-            identifier_hash: import.meta.env.REACT_APP_HASH, // Ensure it's prefixed correctly
+            identifier_hash: `${import.meta.env.VITE_HASH}`, // Ensure it's prefixed correctly
           },
         });
       } else {
